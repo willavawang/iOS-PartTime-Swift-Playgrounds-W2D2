@@ -25,7 +25,7 @@ mph + 0.1
 //: ### Challenge 1
 //:
 //: Change the value in `mph` to be equal to 90, use the assignment operator `=`.
-
+mph = 90
 
 
 
@@ -34,6 +34,7 @@ mph + 0.1
 //: The `greeting` variable contains a greeting. Change the value in `greeting` to include your name. i.e. if greeting contained "Hello" and your name is "Danny", then it should now contain "Hello, Danny".
 
 greeting = "Hello"
+greeting = greeting + ", Will"
 
 
 
@@ -49,10 +50,10 @@ greeting = "Hello"
 //: What type are `bicycleCount`, and `isGood`?
 
 var bicycleCount = 10
-// bicycleCount type is:
+// bicycleCount type is: Int
 
 var isGood = true
-// isGood's type is:
+// isGood's type is: Bool
 
 
 //: Swift infers the type of a variable based on the initial value. This is mostly useful, but sometimes we want to change the inferred type.
@@ -63,7 +64,6 @@ var height: Double = 10
 
 //: Since all our variables have types, even if we haven't specifically set them, we can't store any old value in them... only values of the right type.
 //: Test this out. Try setting the value of `count` to be `height`:
-
 
 
 //: It didn't work, right? They are both numbers, but `count` is an Int, and `height` is a `Double`. There are ways to convert between types, but we won't go into that just now. You can delete that broken line of code now.

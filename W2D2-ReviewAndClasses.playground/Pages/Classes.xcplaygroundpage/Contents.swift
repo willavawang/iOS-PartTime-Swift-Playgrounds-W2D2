@@ -48,22 +48,37 @@ box1.area()
 //: Using the Box class as an example, create a new class called Bicycle. Bicycles should have two `Int` properties, `numberOfGears` and `currentGear` (give them sensible default values).
 //:
 //: Bicycles should also have two functions. `gearUp()` and `gearDown()`, which increase and decrease the value in `currentGear`.
+class Bicycle {
+    let numberOfGears: Double
+    var currentGear = 1
 
+    func gearUp() {
+        currentGear = currentGear + 1
+    }
+    func gearDown() {
+        currentGear = currentGear - 1
+    }
+    
+    init(gears: Double) {
+        numberOfGears = gears
+    }
+    
+}
 
 
 
 
 //: Test your bicycle out by uncommenting the following code:
  
-//var myBike = Bicycle()
-//
+var myBike = Bicycle(gears: 16)
+
 //myBike.numberOfGears = 16 // upgrade!
-//myBike.gearUp()
-//myBike.gearUp()
-//myBike.gearDown()
-//myBike.gearUp()
-//
-//print("my bike is in the \(myBike.currentGear)rd gear")
+myBike.gearUp()
+myBike.gearUp()
+myBike.gearDown()
+myBike.gearUp()
+
+print("my bike is in the \(myBike.currentGear)rd gear")
 
 
 //: ## Challenge 2
@@ -115,7 +130,6 @@ brightBulb.watts
 
 
 
-
 //: ## Bonus Challenge
 
 //: Subclassing allows us to make a new class that has all the same properties and functions as its "parent" class.
@@ -126,7 +140,16 @@ brightBulb.watts
 //: The syntax for subclassing can be found in the Swift Cheat Sheet included with this Playground.
 //:
 //: Hint: height * width * depth = the area of a cube
-
+class Cube: Box {
+    var depth: Double = 0
+    
+    override func area() -> Double {
+        let sideA = height * width
+        let sideB = height * depth
+        let sideC = width * depth
+        return (sideA + sideB + sideC) * 2
+    }
+}
 
 
 

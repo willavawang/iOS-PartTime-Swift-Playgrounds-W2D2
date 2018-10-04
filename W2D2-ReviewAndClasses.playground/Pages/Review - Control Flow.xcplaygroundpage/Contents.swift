@@ -39,7 +39,14 @@ if someThing > otherThing {
 //: ### Challenge 1
 //:
 //: Now see if you can make an `if`/`else` statement that prints out a description of how fast we're moving. I.e. "We're standing still" or "We're moving 88.0 km/h".
-kph
+if kph > 30 {
+    print("oa slow down buddy, \(kph) km/h is too fast for this school zone!")
+} else if kph > 0 {
+    print("We're going \(kph) km/h")
+} else {
+    print("We're not moving")
+}
+
 
 
 
